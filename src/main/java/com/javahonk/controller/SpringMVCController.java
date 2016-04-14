@@ -29,21 +29,25 @@ public class SpringMVCController {
 
     }
 
-    @RequestMapping(value = "/springPaginationDataTables.web", method = RequestMethod.GET, produces = "application/json")
+    @RequestMapping(value = "/springPaginationDataTables.web", method = RequestMethod.POST, produces = "application/json")
     public
     @ResponseBody
     String springPaginationDataTables(HttpServletRequest request) throws IOException {
 
         //Fetch the page number from client
         Integer pageNumber = 0;
-        if (null != request.getParameter("iDisplayStart"))
-            pageNumber = (Integer.valueOf(request.getParameter("iDisplayStart")) / 10) + 1;
+//        if (null != request.getParameter("iDisplayStart"))
+        if (null != request.getParameter("start"))
+//            pageNumber = (Integer.valueOf(request.getParameter("iDisplayStart")) / 10) + 1;
+            pageNumber = (Integer.valueOf(request.getParameter("start")) / 10) + 1;
 
         //Fetch search parameter
-        String searchParameter = request.getParameter("sSearch");
+//        String searchParameter = request.getParameter("sSearch");
+        String searchParameter = request.getParameter("search[value]");
 
         //Fetch Page display length
-        Integer pageDisplayLength = Integer.valueOf(request.getParameter("iDisplayLength"));
+//        Integer pageDisplayLength = Integer.valueOf(request.getParameter("iDisplayLength"));
+        Integer pageDisplayLength = Integer.valueOf(request.getParameter("length"));
 
         //Create page list data
         List<Person> personsList = createPaginationData(pageDisplayLength);
