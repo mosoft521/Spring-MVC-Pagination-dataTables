@@ -103,7 +103,7 @@ public class SpringMVCController {
         List<Person> personsList = new ArrayList<Person>();
         for (int i = 0; i < 1; i++) {
             Person person2 = new Person();
-            person2.setName("John Landy");
+            person2.setName("中文John Landy");
             person2.setPosition("System Architect");
             person2.setSalary("$320,800");
             person2.setOffice("NY");
@@ -112,7 +112,7 @@ public class SpringMVCController {
             personsList.add(person2);
 
             person2 = new Person();
-            person2.setName("Igor Vornovitsky");
+            person2.setName("中文Igor Vornovitsky");
             person2.setPosition("Solution Architect");
             person2.setSalary("$340,800");
             person2.setOffice("NY");
@@ -121,7 +121,7 @@ public class SpringMVCController {
             personsList.add(person2);
 
             person2 = new Person();
-            person2.setName("Java Honk");
+            person2.setName("中文Java Honk");
             person2.setPosition("Architect");
             person2.setSalary("$380,800");
             person2.setOffice("NY");
@@ -130,7 +130,7 @@ public class SpringMVCController {
             personsList.add(person2);
 
             person2 = new Person();
-            person2.setName("Ramesh Arrepu");
+            person2.setName("中文Ramesh Arrepu");
             person2.setPosition("Sr. Architect");
             person2.setSalary("$310,800");
             person2.setOffice("NY");
@@ -139,7 +139,7 @@ public class SpringMVCController {
             personsList.add(person2);
 
             person2 = new Person();
-            person2.setName("Bob Sidebottom");
+            person2.setName("中文Bob Sidebottom");
             person2.setPosition("Architect");
             person2.setSalary("$300,800");
             person2.setOffice("NJ");
@@ -151,7 +151,7 @@ public class SpringMVCController {
 
         for (int i = 0; i < pageDisplayLength - 5; i++) {
             Person person2 = new Person();
-            person2.setName("Zuke Torres");
+            person2.setName("中文Zuke Torres");
             person2.setPosition("System Architect");
             person2.setSalary("$320,800");
             person2.setOffice("NY");

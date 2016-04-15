@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-         pageEncoding="ISO-8859-1" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Spring pagination using data tables</title>
     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css">
     <script type="text/javascript" src="//code.jquery.com/jquery-1.12.0.min.js"></script>
@@ -12,24 +12,24 @@
     <script type="text/javascript">
 
         //Plug-in to fetch page data
-//        jQuery.fn.dataTableExt.oApi.fnPagingInfo = function (oSettings) {
-//            return {
-//                "iStart": oSettings._iDisplayStart,
-//                "iEnd": oSettings.fnDisplayEnd(),
-//                "iLength": oSettings._iDisplayLength,
-//                "iTotal": oSettings.fnRecordsTotal(),
-//                "iFilteredTotal": oSettings.fnRecordsDisplay(),
-//                "iPage": oSettings._iDisplayLength === -1 ?
-//                        0 : Math.ceil(oSettings._iDisplayStart / oSettings._iDisplayLength),
-//                "iTotalPages": oSettings._iDisplayLength === -1 ?
-//                        0 : Math.ceil(oSettings.fnRecordsDisplay() / oSettings._iDisplayLength)
-//            };
-//        };
+        //        jQuery.fn.dataTableExt.oApi.fnPagingInfo = function (oSettings) {
+        //            return {
+        //                "iStart": oSettings._iDisplayStart,
+        //                "iEnd": oSettings.fnDisplayEnd(),
+        //                "iLength": oSettings._iDisplayLength,
+        //                "iTotal": oSettings.fnRecordsTotal(),
+        //                "iFilteredTotal": oSettings.fnRecordsDisplay(),
+        //                "iPage": oSettings._iDisplayLength === -1 ?
+        //                        0 : Math.ceil(oSettings._iDisplayStart / oSettings._iDisplayLength),
+        //                "iTotalPages": oSettings._iDisplayLength === -1 ?
+        //                        0 : Math.ceil(oSettings.fnRecordsDisplay() / oSettings._iDisplayLength)
+        //            };
+        //        };
 
         //DataTables 1.10+ provides the page.info() method, built-in, provide
-//        the same information as this method. As such this method is marked
-//        deprecated, but is available for use with legacy version of DataTables.
-//                Please use the new API if you are used DataTables 1.10 or newer.
+        //        the same information as this method. As such this method is marked
+        //        deprecated, but is available for use with legacy version of DataTables.
+        //                Please use the new API if you are used DataTables 1.10 or newer.
 
         $(document).ready(function () {
 
