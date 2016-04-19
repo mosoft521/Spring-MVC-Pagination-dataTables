@@ -1,7 +1,5 @@
 package com.javahonk.controller;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -20,19 +18,16 @@ import java.util.List;
 @Controller
 public class SpringMVCController {
 
-    @RequestMapping(value = "/helloWorld.web", method =
-            RequestMethod.GET)
-    public String printWelcome(@ModelAttribute("person") Person person, BindingResult result, ModelMap model, HttpServletRequest
-            request, HttpServletResponse response) {
-
+    @RequestMapping(value = "/helloWorld.web", method = RequestMethod.GET)
+    public String printWelcome(@ModelAttribute("person") Person person, BindingResult result, ModelMap model, HttpServletRequest request, HttpServletResponse response) {
         return "helloWorld";
 
     }
 
-    @RequestMapping(value = "/springPaginationDataTables.web", method = RequestMethod.POST, produces = "application/json")
+    @RequestMapping(value = "/springPaginationDataTables.json", produces = "application/json")
     public
     @ResponseBody
-    String springPaginationDataTables(HttpServletRequest request) throws IOException {
+    PersonJsonObject springPaginationDataTables(HttpServletRequest request) throws IOException {
 
         //Fetch the page number from client
         Integer pageNumber = 0;
@@ -74,10 +69,10 @@ public class SpringMVCController {
         personJsonObject.setiTotalRecords(500);
         personJsonObject.setAaData(personsList);
 
-        Gson gson = new GsonBuilder().setPrettyPrinting().create();
-        String json2 = gson.toJson(personJsonObject);
+//        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+//        String json2 = gson.toJson(personJsonObject);
 
-        return json2;
+        return personJsonObject;
     }
 
     private List<Person> getListBasedOnSearchParameter(String searchParameter, List<Person> personsList) {
